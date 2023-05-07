@@ -96,7 +96,7 @@
         $_POST['name'] = sanitize($_POST['name']);
         $_POST['email'] = sanitize($_POST['email'], 'email');
         $_POST['password'] = sanitize($_POST['password']);
-        $_POST['confirm-password'] = sanitize($_POST['confirm-password']);
+        $_POST['confirm_password'] = sanitize($_POST['confirm_password']);
         return;
     }
 ?>
