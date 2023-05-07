@@ -12,7 +12,7 @@ class DB
             return self::$conn;
         }
         try{
-            self::$conn = new \PDO('mysql:host=localhost;dbname='.DB_NAME, DB_USER, DB_PASS,[
+            self::$conn = new \PDO('mysql:host=localhost;dbname='.DB_NAME, DB_USER,'',[
                 \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
             ]);
