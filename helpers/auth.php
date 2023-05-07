@@ -77,7 +77,7 @@ function clearSession()
     setcookie(
         session_name(),
         '',
-        time() - 3600,
+        time() - 3600
     );
 
     session_destroy();
