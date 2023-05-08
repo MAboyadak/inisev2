@@ -6,8 +6,8 @@ include_once __DIR__.'/../partials/header.php';
 ?>
 
 <section>
-    <h2 class="text-center my-4">Add Message</h2>
-    <div class="row justify-content-center">
+    <h2 class="text-center p-2 rounded bg-secondary text-white mt-4">Add Message</h2>
+    <div class="row justify-content-center p-2 mt-0 rounded g-0" style="background-color: #f0f0f0;">
    
         <div class="col-md-8">
             <?php
@@ -65,8 +65,9 @@ include_once __DIR__.'/../partials/header.php';
 
                     </div>
                 </div>
-                
-                <button type="submit" class="btn btn-primary my-2">Submit</button>
+                <div class="row justify-content-center">
+                    <button type="submit" class="btn btn-primary my-2 w-25">Submit</button>
+                </div>
 
             </form>
 

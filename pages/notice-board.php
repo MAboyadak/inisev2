@@ -6,6 +6,7 @@ include_once __DIR__.'/../partials/header.php';
 
 ?>
 
+
 <h2 class="text-center p-2 rounded bg-secondary text-white">ALl Messages</h2>
 
 
