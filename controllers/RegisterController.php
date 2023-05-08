@@ -56,7 +56,7 @@
                 clearSession();
             }
 
-            $_SESSION['error'] = 'Error in Registeration'; //. $e->getMessage();
+            $_SESSION['error'] = 'Error in Registeration ' .  $e->getMessage();
             header('Location: /inisev2/pages/register.php');
             return;
         }
