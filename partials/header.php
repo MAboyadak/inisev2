@@ -25,7 +25,7 @@
                 <a class="nav-link" href="/inisev2/pages/add-message.php">Add Message</a>
               </li>
               <li class="nav-item">
-                  <form action="/inisev2/controllers/logoutcontroller.php" method="POST">
+                  <form action="/inisev2/controllers/LogoutController.php" method="POST">
                       <button type="submit" class="nav-link btn">Logout</button>
                   </form>        
               </li>
