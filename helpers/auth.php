@@ -56,12 +56,17 @@ function setAuthenticated($user_id)
 {
     clearSession();
     
-    session_set_cookie_params([
-        'lifetime' => 86400,
-        'httponly' => true,
-        'samesite' => 'lax'    
-    ]);
+    // session_set_cookie_params([
+    //     'lifetime' => 86400,
+    //     'httponly' => true,
+    //     'samesite' => 'Lax'    
+    // ]);
     
+    ini_set('session.cookie_lifetime', 86400);
+    ini_set('session.cookie_httponly', true);
+    ini_set('session.cookie_samesite', 'Lax');
+
+
     session_start();
     $_SESSION['user_id'] = $user_id;
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
