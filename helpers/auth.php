@@ -44,6 +44,10 @@ function attempt($user)
         ':email' => $user['email'],
     ];
     $foundUser = SQL::findWithParams($query, $params);
+    
+    if(!$foundUser){
+        return false;
+    }
 
     if( password_verify($user['password'], $foundUser['password']) ){
         return $foundUser;

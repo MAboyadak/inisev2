@@ -36,6 +36,12 @@ try{
 
     $user = attempt($user);
 
+    if(!$user){
+        $_SESSION['error'] = 'Not-Valid Credentials';
+        header('Location: /inisev2');
+        exit;    
+    }
+
 }catch(\PDOException $e){
 
     if( isset($_SESSION) && isset($_SESSION['user_id']) ){

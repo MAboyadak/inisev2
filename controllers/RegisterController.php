@@ -31,9 +31,14 @@
             ':password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
         ];
 
-        
+        if(isDuplicated()){
+            $_SESSION['error'] = 'This email already exists';
+            header('Location: /inisev2/pages/register.php');
+            return;    
+        }  
+
         try{
-            DB::connect()->beginTransaction();
+            DB::connect()->beginTransaction();          
 
             $query = 'insert into `users` (`name`, `email`, `password`) VALUES (:name, :email, :password)';
             
@@ -61,6 +66,20 @@
             return;
         }
       
+    }
+
+    function isDuplicated()
+    {
+        $params = [
+            ':email' => $_POST['email']
+        ];
+
+        $query = 'select id from users where email=:email';
+        $result = SQL::queryWithParams($query, $params);
+        if( count($result) > 0){
+            return true;
+        }
+        return false;
     }
 
     function validateData($data, &$errors)
