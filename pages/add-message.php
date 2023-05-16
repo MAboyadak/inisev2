@@ -78,3 +78,5 @@ include_once __DIR__.'/../partials/header.php';
 </section>
 
 <?php if(isset($_SESSION['errors'])) unset($_SESSION['errors']);?>
+
+<?php include_once __DIR__.'/../partials/footer.php'; ?>
