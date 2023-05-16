@@ -1,4 +1,7 @@
 <?php
+// Disable error display
+ini_set('display_errors', 'Off');
+error_reporting(E_ALL);
 
 include_once __DIR__.'/../helpers/sql.php';
 include_once __DIR__.'/../helpers/auth.php';
