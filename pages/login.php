@@ -36,7 +36,7 @@
                 </div>
 
                 <button class="btn btn-outline-light btn-lg px-5 mb-3" type="submit">Login</button>
-                <p class="text-center mt-3"><a class="text-warning" rel="nofollow" href="/inisev2/pages/register.php">New User ? Register here</a></p>
+                <p class="text-center mt-3"><a class="text-warning" rel="" href="/inisev2/pages/register.php">Register here..</a></p>
               </form>
 
             </div>
